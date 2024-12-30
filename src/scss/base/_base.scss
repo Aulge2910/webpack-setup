@@ -1,0 +1,9 @@
+@import "./typography";
+body {
+    background-color: pink;
+}
+
+html {
+    font-size: clamp(14px, 2.1333vw,28px);
+}
+

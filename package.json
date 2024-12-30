@@ -1,0 +1,47 @@
+{
+  "name": "shang_demo",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "webpack serve --config ./config/webpack.dev.js",
+    "build": "webpack  --config ./config/webpack.prod.js",
+    "sass-migrate": "sass-migrator module --migrate-deps --load-path=src ./src/scss/index.scss"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "devDependencies": {
+    "autoprefixer": "^10.4.20",
+    "css-loader": "^7.1.2",
+    "eslint-webpack-plugin": "^4.2.0",
+    "mini-css-extract-plugin": "^2.9.2",
+    "postcss-loader": "^8.1.1",
+    "sass": "^1.77.6",
+    "sass-loader": "^16.0.4",
+    "style-loader": "^4.0.0",
+    "webpack": "^5.97.1",
+    "webpack-cli": "^5.1.4",
+    "webpack-dev-server": "^5.2.0"
+  },
+  "dependencies": {
+    "@babel/preset-env": "^7.26.0",
+    "@popperjs/core": "^2.11.8",
+    "babel-loader": "^9.2.1",
+    "bootstrap": "^5.3.3",
+    "bootstrap-sass": "^3.4.3",
+    "eslint": "^9.17.0",
+    "eslint-plugin-only-warn": "^1.1.0",
+    "form-serialize": "^0.7.2",
+    "html-webpack-plugin": "^5.6.3",
+    "jquery": "^3.7.1",
+    "postcss": "^8.4.49",
+    "postcss-preset-env": "^10.1.2"
+  },
+  "browserslist": [
+    "last 2 version",
+    "> 1%",
+    "not dead"
+  ]
+}
