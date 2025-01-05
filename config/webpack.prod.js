@@ -9,7 +9,7 @@ module.exports = {
     output:{
         path: path.join(__dirname,'../dist'),
         clean: true,
-        filename:'index.js'
+        filename:'static/js/index.js'
     },
 
     plugins: [
@@ -59,12 +59,12 @@ module.exports = {
                         },
                         'sass-loader'],
                 },
-                {
-                    test:/\.(png|jpe?g|gif|webp|svg)$/,
-                    type:   "asset",
+               {
+                    test:/\.(png|jpeg|jpg|gif|webp|svg)$/,
+                    type: 'asset',
                     parser: {
                         dataUrlCondition: {
-                            maxSize: 10* 1024,
+                            maxSize: 4*1024,
                         },
                     },
                     generator: {
@@ -90,6 +90,10 @@ module.exports = {
                     options: {
                         presets: ['@babel/preset-env']
                     }
+                },
+                {
+                    test: /\.html$/i,
+                    loader: 'html-loader'
                 }
         ]
     }

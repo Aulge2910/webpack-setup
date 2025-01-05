@@ -13,9 +13,9 @@ module.exports = {
        //可以写undefined，开发模式没有输出
 
 
-       path: undefined,
+        path: undefined,    
+        filename:'static/js/index.js',
         clean: true,
-        filename:'index.js'
     },
 
     plugins: [
@@ -69,27 +69,31 @@ module.exports = {
                     ]
                 },
                 {
-                    test:/\.(png|jpe?g|gif|webp|svg)$/,
-                    type:   "asset",
+                    test:/\.(png|jpeg|jpg|gif|webp|svg)$/,
+                    
+                             
+                    type: 'asset/resource',
                     parser: {
                         dataUrlCondition: {
-                            maxSize: 10* 1024,
+                            maxSize: 4*1024,
                         },
                     },
                     generator: {
-                        filename: "static/images/[hash:10][ext][query]",
-                    }
+                        filename: "static/images/[name][hash:10][ext][query]",
+                    },
+                 
                 },
+                
                 {
                     test: /\.(ttf|woff2?)$/,
                     type: "asset/resource",
                     parser: {
                         dataUrlCondition: {
-                            maxSize: 10 * 1024,
+                            maxSize: 10*1024,
                         },
                     },
                     generator: {
-                        filename: "static/media/[hash:10][ext][query]"
+                        filename: 'static/media/[hash:10][ext][query]'
                     }
                 },
                 {
@@ -99,6 +103,10 @@ module.exports = {
                     options: {
                         presets: ['@babel/preset-env']
                     }
+                },
+                ,{
+                    test: /\.html$/i,
+                    loader: 'html-loader'
                 }
         ]
     }
