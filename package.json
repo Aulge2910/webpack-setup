@@ -1,12 +1,11 @@
 {
-  "name": "shang_demo",
+  "name": "my_demo",
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "webpack serve --config ./config/webpack.dev.js",
-    "build": "webpack  --config ./config/webpack.prod.js",
-    "sass-migrate": "sass-migrator module --migrate-deps --load-path=src ./src/scss/index.scss"
+    "build": "webpack  --config ./config/webpack.prod.js"
   },
   "keywords": [],
   "author": "",
@@ -39,6 +38,7 @@
     "eslint": "^9.17.0",
     "eslint-plugin-only-warn": "^1.1.0",
     "form-serialize": "^0.7.2",
+    "gsap": "^3.12.5",
     "jquery": "^3.7.1",
     "postcss": "^8.4.49",
     "postcss-preset-env": "^10.1.2"

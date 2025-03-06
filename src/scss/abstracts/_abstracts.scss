@@ -1,6 +1,5 @@
-@import "variables";
-@import "functions";
-@import "mixins";
-@import "placeholders";
+    @forward "variables";
+    @forward "functions";
+    @forward "mixins";
+    @forward "placeholders";
 
- 

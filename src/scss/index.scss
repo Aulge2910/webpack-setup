@@ -1,7 +1,6 @@
+//  变量 & Mixin（必须放最前面）
+@use "../scss/abstracts/abstracts" as *;
 
- 
-
- 
  // Custom.scss
 // Option B: Include parts of Bootstrap
 
@@ -40,15 +39,11 @@
 
 
 @import "../../node_modules/bootstrap/scss/close";
+
 // 8. Add additional custom code here
-
- @import "../scss/base/base";
- 
-@import "../scss/abstracts/abstracts";
-
+@import "../scss/base/base";
 @import "../scss/components/components";
 @import "../scss/layout/layout";
 @import "../scss/pages/page";
 @import "../scss/vendors/vendors";
  // 7. Optionally include utilities API last to generate classes based on the Sass map in `_utilities.scss`
- 

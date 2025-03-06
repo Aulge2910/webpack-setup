@@ -1,0 +1,11 @@
+@use "../abstracts/abstracts" as *;
+
+
+.button-primary {
+  @include button-styles($primary-color);
+}
+
+.button-secondary {
+  @include button-styles($secondary-color);
+}
+

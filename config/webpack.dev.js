@@ -3,6 +3,7 @@ const ESLintWebpackPlugin = require('eslint-webpack-plugin')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 const path = require('path')
 const autoprefixer = require('autoprefixer')
+const MiniCssExtractPlugin = require('mini-css-extract-plugin')
 
 module.exports = {
     //读取的路径不用改
@@ -27,6 +28,9 @@ module.exports = {
             template: path.resolve(__dirname,"../public/index.html"),
             //based on this template to produce the html 
         }),
+        new MiniCssExtractPlugin({
+            filename: "static/css/[name].css",
+        }),
 
 
     ],        
@@ -44,7 +48,7 @@ module.exports = {
                 },
                 {
                     test: /\.s[ac]ss$/,
-                    use: ['style-loader', 'css-loader',
+                    use: [MiniCssExtractPlugin.loader, 'css-loader',
                         {
                             loader: "postcss-loader",
                             options: {
@@ -62,7 +66,7 @@ module.exports = {
                             options: {
                                 sassOptions: {
                                 //silenceDeprecations: ['mixed-decls', 'color-functions', 'global-builtin', 'import'],
-                                quietDeps: true // 禁用第三方依赖的警告
+                                //quietDeps: true // 禁用第三方依赖的警告
                                 },
                             },
                         },

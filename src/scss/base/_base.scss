@@ -1,10 +1,29 @@
-@import "./typography";
+
+@use "../abstracts/variables" as *;
+@use "../abstracts/mixins" as *;
+@import "../base/typography";
+
+
 body {
-    background-color: pink;
- 
+  font-family: $font-stack;
+  color: $secondary-color;
+  background-color: $primary-color; // 这行用来测试是否生效
 }
 
 html {
+    //16px for normal
     font-size: clamp(14px, 2.1333vw,28px);
 }
+
+h1 {
+  font-size: 2rem;
+  color: $primary-color;
+}
+
+p {
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+ 
 

@@ -1,0 +1,37 @@
+.img-wrap {
+    width: 100%;
+    border: 3px solid black;
+    height: 600px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    position: relative;
+
+    img {
+        width: 250px;
+        height: 400px;
+        position: absolute;
+    }
+}
+
+
+.img--2 {
+    left: 50px;
+    z-index: -1;
+}
+.img--3 {
+    left: 250px;z-index: -1;
+}
+.img--4 {
+    left: 450px;z-index: -1;
+}
+
+.img--5 {
+    left: 800px;z-index: -1;
+}
+.img--6 {
+    left: 1050px;z-index: -1;
+}
+.img--7 {
+    left: 1250px;
+}

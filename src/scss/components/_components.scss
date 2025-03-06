@@ -1,14 +1,4 @@
 @import "./img-wrap";
-
- 
-.img-wrap {
-    width: 100%;
-    height: 500px;
- 
-    border: 1px solid red;
-
-    img {
-        width: 250px;
-        height: 100%;
-    }
-}
+@import "./buttons";
+@import "./cards";
+@import "./forms";
