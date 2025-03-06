@@ -1,4 +1,4 @@
-# Project2
+# Webpack setup
 
 ## Overview
 This project is configured with Webpack to bundle various types of assets including SCSS, images, JavaScript, etc. The configuration is designed for development and production environments.
